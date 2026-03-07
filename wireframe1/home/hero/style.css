@@ -1,0 +1,94 @@
+/* HERO COMPONENT: style.css */
+.peaches-hero {
+    position: relative;
+    width: 100vw;
+    min-height: clamp(600px, 90vh, 1000px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    background-color: var(--clr-secondary-lightpeach);
+}
+
+.peaches-hero__graphic {
+    position: absolute;
+    right: 5%;
+    bottom: 0;
+    width: 45%;
+    max-width: 600px;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.peaches-hero__logo-img {
+    width: 100%;
+    height: auto;
+    mix-blend-mode: multiply;
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.1));
+}
+
+.peaches-hero__container {
+    position: relative;
+    width: 100%;
+    z-index: 2;
+}
+
+.peaches-hero__content {
+    position: relative;
+    max-width: 800px; /* Keep text constrained */
+    z-index: 3;
+}
+
+.peaches-hero__headline {
+    font-size: clamp(3rem, 6vw, 6.5rem);
+    line-height: 1.1;
+    margin-bottom: var(--spacing-sm);
+    color: var(--clr-primary-darkwood);
+    display: flex;
+    flex-direction: column;
+}
+
+/* For GSAP text splitting/revealing */
+.peaches-hero__headline-line {
+    display: block;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.peaches-hero__subtitle {
+    font-size: clamp(1.125rem, 2vw, 1.5rem);
+    color: var(--clr-primary-choc);
+    margin-bottom: var(--spacing-md);
+    max-width: 32ch;
+}
+
+.peaches-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.peaches-hero__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.peaches-hero__background-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 218, 185, 0.9) 0%, rgba(255, 203, 164, 0.4) 100%);
+    z-index: 2;
+}
+
+.peaches-hero__background-pattern {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(var(--clr-primary-peach) 2px, transparent 2px);
+    background-size: 20px 20px;
+    opacity: 0.3;
+    z-index: 1;
+}

@@ -1,0 +1,147 @@
+/*=============================================================================
+   PEACHES 3D PRINTS - GLOBAL STYLES (ASSETS)
+=============================================================================*/
+:root {
+    /* Primary Colors */
+    --clr-primary-peach: #FFCBA4;
+    --clr-primary-choc: #84563C;
+    --clr-primary-darkwood: #5C4033;
+    --clr-primary-darkgray: #333333;
+
+    /* Secondary Colors */
+    --clr-secondary-lightgray: #D3D3D3;
+    --clr-secondary-lightwood: #D2B48C;
+    --clr-secondary-lightpeach: #FFDAB9;
+    --clr-accent-orange: #F2930D;
+    --clr-white: #FFFFFF;
+    --clr-black: #000000;
+
+    /* Typography */
+    /* Techy Modern For Titles */
+    --font-title: 'Jura', sans-serif;
+    /* Fat Letter Casual for H1 */
+    --font-h1: 'Fredoka One', cursive; 
+    /* Modern for H2 */
+    --font-h2: 'Poppins', sans-serif;
+    /* Typical text font */
+    --font-body: 'Roboto', sans-serif;
+
+    /* Spacing & Layout */
+    --spacing-xs: clamp(0.5rem, 1vw, 1rem);
+    --spacing-sm: clamp(1rem, 2vw, 1.5rem);
+    --spacing-md: clamp(1.5rem, 3vw, 2.5rem);
+    --spacing-lg: clamp(2.5rem, 5vw, 4rem);
+    --spacing-xl: clamp(4rem, 8vw, 8rem);
+    --section-padding: clamp(3rem, 6vw, 6rem) clamp(1rem, 4vw, 4rem);
+
+    /* UI Dynamics */
+    --transition-base: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --border-radius-sm: 8px;
+    --border-radius-md: 16px;
+    --border-radius-pill: 100px;
+}
+
+/* Base Rest */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    /* Using percentage ensures responsive fluidity out of the gate */
+    font-size: 16px; 
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--clr-primary-darkgray);
+    background-color: var(--clr-white);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Typography Hierarchy */
+h1 {
+    font-family: var(--font-h1);
+    color: var(--clr-primary-darkwood);
+    font-weight: normal; /* Fredoka is fat enough */
+}
+
+h2, h3, h4 {
+    font-family: var(--font-h2);
+    font-weight: 600;
+    color: var(--clr-primary-darkgray);
+}
+
+/* Tech Title class for specialized labels */
+.tech-title {
+    font-family: var(--font-title);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+}
+
+/* Global Utilities */
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 clamp(1rem, 4vw, 4rem);
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Global Button Modifier */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-h2);
+    font-weight: 500;
+    padding: clamp(0.75rem, 1vw, 1rem) clamp(1.5rem, 2vw, 2.5rem);
+    border-radius: var(--border-radius-pill);
+    text-decoration: none;
+    transition: var(--transition-base);
+    border: none;
+    cursor: pointer;
+}
+
+.btn--primary {
+    background-color: var(--clr-primary-peach);
+    color: var(--clr-primary-darkwood);
+}
+
+.btn--primary:hover {
+    background-color: var(--clr-primary-choc);
+    color: var(--clr-white);
+    transform: translateY(-2px);
+}
+
+.btn--secondary {
+    background-color: transparent;
+    border: 2px solid var(--clr-primary-choc);
+    color: var(--clr-primary-choc);
+}
+
+.btn--secondary:hover {
+    background-color: var(--clr-primary-choc);
+    color: var(--clr-white);
+}
+
+.btn--orange {
+    background-color: var(--clr-accent-orange);
+    color: var(--clr-white);
+}
+
+.btn--orange:hover {
+    background-color: var(--clr-primary-darkwood);
+    transform: translateY(-2px);
+}

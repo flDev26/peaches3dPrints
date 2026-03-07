@@ -1,0 +1,54 @@
+/* OUR STORY COMPONENT: style.css */
+.peaches-about-story {
+    background-color: var(--clr-white);
+    padding: var(--section-padding) 0;
+}
+
+.peaches-about-story__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+    align-items: center;
+}
+
+.peaches-about-story__image-placeholder {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background: linear-gradient(135deg, var(--clr-secondary-lightpeach) 0%, var(--clr-primary-peach) 100%);
+    border-radius: var(--border-radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-title);
+    color: var(--clr-white);
+    font-size: 1.5rem;
+    box-shadow: 20px 20px 60px rgba(0,0,0,0.05);
+}
+
+.peaches-about-story__title {
+    color: var(--clr-primary-darkwood);
+    margin-bottom: var(--spacing-md);
+    position: relative;
+}
+
+.peaches-about-story__title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background-color: var(--clr-accent-orange);
+}
+
+.peaches-about-story__content {
+    color: var(--clr-primary-darkgray);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-sm);
+}
+
+@media (max-width: 768px) {
+    .peaches-about-story__grid {
+        grid-template-columns: 1fr;
+    }
+}

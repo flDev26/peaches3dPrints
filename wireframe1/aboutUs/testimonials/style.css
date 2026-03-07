@@ -1,0 +1,42 @@
+/* TESTIMONIALS COMPONENT: style.css */
+.peaches-about-testimonials {
+    background-color: var(--clr-primary-darkwood);
+    color: var(--clr-white);
+    padding: var(--section-padding) 0;
+}
+
+.peaches-about-testimonials__header {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.peaches-about-testimonials__title {
+    color: var(--clr-primary-peach);
+}
+
+.peaches-about-testimonials__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.peaches-about-testimonial {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-md);
+    border: 1px solid rgba(255, 218, 185, 0.1);
+}
+
+.peaches-about-testimonial__quote {
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: var(--spacing-sm);
+    color: var(--clr-secondary-lightgray);
+}
+
+.peaches-about-testimonial__author {
+    font-weight: 600;
+    color: var(--clr-primary-peach);
+    text-align: right;
+}

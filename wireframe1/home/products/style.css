@@ -1,0 +1,112 @@
+/* PRODUCTS COMPONENT: style.css */
+.peaches-products {
+    background-color: var(--clr-secondary-lightgray); /* Gentle contrast */
+    position: relative;
+    overflow: hidden;
+}
+
+.peaches-products__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: var(--spacing-lg);
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.peaches-products__title {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    color: var(--clr-primary-darkgray);
+}
+
+.peaches-products__link {
+    color: var(--clr-primary-choc);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition-base);
+}
+
+.peaches-products__link:hover {
+    color: var(--clr-primary-peach);
+}
+
+.peaches-products__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.peaches-product-card {
+    background: var(--clr-white);
+    border-radius: var(--border-radius-sm);
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: var(--transition-base);
+    display: flex;
+    flex-direction: column;
+}
+
+.peaches-product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+.peaches-product-card__image-wrap {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background-color: var(--clr-secondary-lightpeach);
+}
+
+.peaches-product-card__placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--clr-primary-darkwood);
+    font-family: var(--font-title);
+    font-size: 1.2rem;
+    opacity: 0.5;
+}
+
+.peaches-product-card__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(92, 64, 51, 0.7); /* Dark wood with transparency */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition-base);
+}
+
+.peaches-product-card:hover .peaches-product-card__overlay {
+    opacity: 1;
+}
+
+.peaches-product-card__btn {
+    transform: translateY(20px);
+    transition: var(--transition-base);
+}
+
+.peaches-product-card:hover .peaches-product-card__btn {
+    transform: translateY(0);
+}
+
+.peaches-product-card__info {
+    padding: var(--spacing-sm);
+    text-align: center;
+}
+
+.peaches-product-card__name {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--clr-primary-darkgray);
+}
+
+.peaches-product-card__price {
+    font-weight: 600;
+    color: var(--clr-primary-choc);
+    font-size: 1.125rem;
+}

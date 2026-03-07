@@ -1,0 +1,61 @@
+/* PROCESS COMPONENT: style.css */
+.peaches-process {
+    background-color: var(--clr-white);
+}
+
+.peaches-process__header {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.peaches-process__title {
+    color: var(--clr-primary-darkwood);
+}
+
+.peaches-process__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+}
+
+.peaches-process__card {
+    background-color: var(--clr-secondary-lightgray);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-md);
+    text-align: center;
+    position: relative;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.peaches-process__card--orange {
+    background-color: var(--clr-accent-orange);
+    color: var(--clr-white);
+}
+
+.peaches-process__num {
+    font-size: 0.8rem;
+    color: var(--clr-primary-darkwood);
+    opacity: 0.5;
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+}
+
+.peaches-process__card--orange .peaches-process__num {
+    color: var(--clr-white);
+}
+
+.peaches-process__icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.peaches-process__card--orange .peaches-process__step-title {
+    color: var(--clr-white);
+}
+
+@media (max-width: 768px) {
+    .peaches-process__grid {
+        grid-template-columns: 1fr;
+    }
+}

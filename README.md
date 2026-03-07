@@ -3,7 +3,7 @@
 Welcome to the **Peaches 3D Prints** repository! 
 
 ## Project Overview
-This repository is dedicated to 3D printing projects, models, and configurations.
+This repository showcases the construction of a website for a local 3D printing business.
 
 ## Getting Started
 To get started with this project, clone the repository and explore the contents.

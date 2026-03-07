@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Peaches 3D Prints</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Jura:wght@400..700&family=Poppins:wght@300;400;500;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="/assets/style.css">
+
+    <!-- Component Logic Requirements -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Component Styles -->
+    <link rel="stylesheet" href="/header/style.css">
+    <link rel="stylesheet" href="/aboutUs/hero/style.css">
+    <link rel="stylesheet" href="/aboutUs/story/style.css">
+    <link rel="stylesheet" href="/aboutUs/portfolio/style.css">
+    <link rel="stylesheet" href="/aboutUs/testimonials/style.css">
+    <link rel="stylesheet" href="/footer/style.css">
+</head>
+<body class="page page--about">
+    
+    <!-- HEADER COMPONENT -->
+    <header class="peaches-header" id="peachesHeader"></header>
+
+    <main class="page__content">
+        <!-- ABOUT HERO COMPONENT -->
+        <section class="peaches-about-hero" id="peachesAboutHeroSection"></section>
+
+        <!-- OUR STORY COMPONENT -->
+        <section class="peaches-about-story" id="peachesAboutStorySection"></section>
+
+        <!-- PORTFOLIO COMPONENT -->
+        <section class="peaches-about-portfolio" id="peachesAboutPortfolioSection"></section>
+
+        <!-- TESTIMONIALS COMPONENT -->
+        <section class="peaches-about-testimonials" id="peachesAboutTestimonialsSection"></section>
+    </main>
+
+    <!-- FOOTER COMPONENT -->
+    <footer class="peaches-footer" id="peachesFooter"></footer>
+
+    <!-- Global & Component Scripts -->
+    <script src="/assets/main.js"></script>
+    <script src="/aboutUs/hero/script.js"></script>
+    <script src="/aboutUs/story/script.js"></script>
+    <script src="/aboutUs/portfolio/script.js"></script>
+    <script src="/aboutUs/testimonials/script.js"></script>
+    <script src="/footer/script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (window.peachesLoader) {
+                // Root-relative paths (starting with /) are the most robust for multi-level sites
+                peachesLoader('/header/section.html', 'peachesHeader');
+                peachesLoader('/aboutUs/hero/section.html', 'peachesAboutHeroSection');
+                peachesLoader('/aboutUs/story/section.html', 'peachesAboutStorySection');
+                peachesLoader('/aboutUs/portfolio/section.html', 'peachesAboutPortfolioSection');
+                peachesLoader('/aboutUs/testimonials/section.html', 'peachesAboutTestimonialsSection');
+                peachesLoader('/footer/section.html', 'peachesFooter');
+            }
+        });
+    </script>
+</body>
+</html>

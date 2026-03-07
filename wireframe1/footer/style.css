@@ -1,0 +1,118 @@
+/* FOOTER COMPONENT: style.css */
+.peaches-footer {
+    background-color: var(--clr-primary-darkwood);
+    color: var(--clr-secondary-lightpeach);
+    position: relative;
+}
+
+.peaches-footer__top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-lg);
+    justify-content: space-between;
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid rgba(255, 218, 185, 0.2);
+}
+
+.peaches-footer__brand {
+    flex: 1 1 300px;
+}
+
+.peaches-footer__logo {
+    color: var(--clr-primary-peach);
+    margin-bottom: var(--spacing-xs);
+    font-size: 1.5rem;
+}
+
+.peaches-footer__bio {
+    max-width: 40ch;
+    color: var(--clr-secondary-lightgray);
+}
+
+.peaches-footer__links {
+    flex: 1 1 150px;
+}
+
+.peaches-footer__heading {
+    color: var(--clr-white);
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.125rem;
+}
+
+.peaches-footer__list {
+    list-style: none;
+    padding: 0;
+}
+
+.peaches-footer__list-item {
+    margin-bottom: 0.5rem;
+}
+
+.peaches-footer__link {
+    color: var(--clr-secondary-lightgray);
+    text-decoration: none;
+    transition: var(--transition-base);
+}
+
+.peaches-footer__link:hover {
+    color: var(--clr-primary-peach);
+}
+
+.peaches-footer__newsletter {
+    flex: 1 1 300px;
+}
+
+.peaches-footer__newsletter-desc {
+    margin-bottom: var(--spacing-xs);
+    color: var(--clr-secondary-lightgray);
+}
+
+.peaches-footer__form {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.peaches-footer__input {
+    flex: 1;
+    min-width: 200px;
+    padding: 0.75rem 1rem;
+    border-radius: var(--border-radius-sm);
+    border: 1px solid var(--clr-secondary-lightwood);
+    font-family: var(--font-body);
+}
+
+.peaches-footer__btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius-sm); 
+}
+
+.peaches-footer__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--spacing-md);
+    gap: var(--spacing-sm);
+}
+
+.peaches-footer__copyright {
+    color: var(--clr-secondary-lightgray);
+    font-size: 0.875rem;
+}
+
+.peaches-footer__social {
+    display: flex;
+    gap: var(--spacing-xs);
+}
+
+.peaches-footer__social-link {
+    color: var(--clr-white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition-base);
+}
+
+.peaches-footer__social-link:hover {
+    color: var(--clr-primary-peach);
+}
