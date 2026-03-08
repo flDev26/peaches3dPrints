@@ -1,12 +1,12 @@
 /**
  * FAQ HERO COMPONENT: script.js
- * Adopts Home Page style animations: Side entrance + ScrollTrigger parallax.
+ * Entrance animations only. ScrollTrigger parallax and fade-out removed.
  */
 
 const initFaqHeroAnimations = () => {
     if (typeof gsap === 'undefined') return;
 
-    // Reset for stability (especially useful in Elementor/SPA environments)
+    // Reset state for stability
     gsap.killTweensOf(".peaches-faq-hero__headline-line, .peaches-faq-hero__graphic");
 
     let mm = gsap.matchMedia();
@@ -26,24 +26,12 @@ const initFaqHeroAnimations = () => {
                 "-=0.6"
             );
 
-        // 2. Graphic Entrance (Slide from right)
+        // 2. Graphic Entrance (Slide from right, then stays put)
         tl.fromTo(".peaches-faq-hero__graphic",
             { x: 100, opacity: 0 },
             { x: 0, opacity: 1, duration: 1.5, ease: "power2.out" },
             "-=1"
         );
-
-        // 3. Desktop Scroll Parallax (Scrub)
-        gsap.to(".peaches-faq-hero__graphic", {
-            y: -150,
-            scale: 1.05,
-            scrollTrigger: {
-                trigger: ".peaches-faq-hero",
-                start: "top top",
-                end: "bottom top",
-                scrub: 1
-            }
-        });
     });
 
     // Mobile Animations (< 610px)
@@ -61,23 +49,12 @@ const initFaqHeroAnimations = () => {
                 "-=0.4"
             );
 
-        // 2. Graphic Entrance (Simple Fade)
-        gsap.fromTo(".peaches-faq-hero__graphic",
-            { opacity: 0 },
-            { opacity: 1, duration: 2, ease: "power2.out" }
+        // 2. Graphic Entrance (Simple Fade, then stays put)
+        tl.fromTo(".peaches-faq-hero__graphic",
+            { opacity: 0, y: 10 }, // Slight upward lift on mobile for flavor
+            { opacity: 1, y: 0, duration: 1.5, ease: "power2.out" },
+            "-=0.5"
         );
-
-        // 3. Mobile Scroll Fade-Out
-        gsap.to(".peaches-faq-hero__graphic", {
-            opacity: 0,
-            scrollTrigger: {
-                trigger: ".peaches-faq-hero",
-                start: "10% top",
-                end: "50% top",
-                scrub: 1,
-                immediateRender: false
-            }
-        });
     });
 };
 
