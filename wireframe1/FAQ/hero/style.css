@@ -39,3 +39,69 @@
     color: var(--clr-secondary-lightgray);
     max-width: 50ch;
 }
+
+.peaches-faq-hero__graphic {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.peaches-faq-hero__logo-img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    /* Keeps the drop shadow consistent */
+    filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.5));
+}
+
+/* NEW: Responsive Layout for FAQ Hero (Matches AboutUs) */
+@media (max-width: 610px) {
+
+    /* Stack the inner container and center items */
+    .peaches-faq-hero__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-top: var(--spacing-xl);
+    }
+
+    /* Text Content: Ensure it stays on top */
+    .peaches-faq-hero__content {
+        order: 1;
+        margin-bottom: var(--spacing-lg);
+    }
+
+    /* Headline: Center the text lines */
+    .peaches-faq-hero__headline {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Subtitle: Prevent it from stretching too wide and keep it centered */
+    .peaches-faq-hero__subtitle {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 90%;
+        /* Optional: keeps line lengths readable on small screens */
+    }
+
+    /* Graphic: Positioned at the bottom */
+    .peaches-faq-hero__graphic {
+        order: 2;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        max-width: 300px;
+        /* Adjust based on your FAQ logo's aspect ratio */
+        margin: 0 auto;
+    }
+
+    .peaches-faq-hero__logo-img {
+        width: 100%;
+        height: auto;
+    }
+}

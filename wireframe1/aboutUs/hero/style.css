@@ -59,24 +59,55 @@
     max-width: 100%;
     height: auto;
     object-fit: contain;
-    filter: drop-shadow(0 20px 50px rgba(0,0,0,0.5));
+    filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.5));
 }
 
-@media (max-width: 992px) {
+/* Responsive Layout for About Hero */
+@media (max-width: 610px) {
+
+    /* Stack the inner container and center items */
     .peaches-about-hero__inner {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
+        padding-top: var(--spacing-xl);
     }
-    
+
+    /* Text Content: Ensure it stays on top */
     .peaches-about-hero__content {
+        order: 1;
+        margin-bottom: var(--spacing-lg);
+    }
+
+    /* Headline: Center the text lines */
+    .peaches-about-hero__headline {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Subtitle: Prevent it from stretching too wide and keep it centered */
+    .peaches-about-hero__subtitle {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 90%;
+        /* Optional: keeps line lengths readable on small screens */
+    }
+
+    /* Graphic: Positioned at the bottom */
+    .peaches-about-hero__graphic {
+        order: 2;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        max-width: 300px;
+        /* Adjust based on your logo's aspect ratio */
         margin: 0 auto;
     }
 
-    .peaches-about-hero__subtitle {
-        margin: 0 auto;
-    }
-    
-    .peaches-about-hero__graphic {
-        margin-top: var(--spacing-lg);
+    .peaches-about-hero__logo-img {
+        width: 100%;
+        height: auto;
     }
 }

@@ -92,3 +92,48 @@
     opacity: 0.3;
     z-index: 1;
 }
+
+/* Responsive Layout */
+@media (max-width: 610px) {
+    .peaches-hero {
+        align-items: flex-start;
+        padding-top: calc(var(--header-height, 60px) + var(--spacing-xl));
+    }
+
+    .peaches-hero__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .peaches-hero__content {
+        order: 1; /* Text on top */
+        text-align: center;
+        margin-bottom: var(--spacing-xl);
+    }
+    
+    .peaches-hero__headline {
+        align-items: center;
+    }
+
+    .peaches-hero__subtitle {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .peaches-hero__actions {
+        justify-content: center;
+    }
+
+    .peaches-hero__graphic {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        width: 100%;
+        max-width: 350px;
+        order: 2; /* Graphic on bottom */
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+}

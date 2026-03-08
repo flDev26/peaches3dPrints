@@ -49,3 +49,16 @@ document.addEventListener("DOMContentLoaded", () => {
         console.warn("GSAP is not loaded globally.");
     }
 });
+
+// Global Header Interactions
+document.addEventListener('peachesComponentLoaded', (e) => {
+    if (e.detail.containerId === 'peachesHeader') {
+        const toggleBtn = document.getElementById('peachesHeaderToggle');
+        const collapseMenu = document.getElementById('peachesHeaderCollapse');
+        if (toggleBtn && collapseMenu) {
+            toggleBtn.addEventListener('click', () => {
+                collapseMenu.classList.toggle('is-open');
+            });
+        }
+    }
+});

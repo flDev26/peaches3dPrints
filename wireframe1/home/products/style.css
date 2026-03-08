@@ -1,6 +1,6 @@
 /* PRODUCTS COMPONENT: style.css */
 .peaches-products {
-    background-color: var(--clr-secondary-lightgray); /* Gentle contrast */
+    background-color: var(--clr-accent-orange);
     position: relative;
     overflow: hidden;
 }
@@ -40,7 +40,7 @@
     background: var(--clr-white);
     border-radius: var(--border-radius-sm);
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     transition: var(--transition-base);
     display: flex;
     flex-direction: column;
@@ -48,7 +48,7 @@
 
 .peaches-product-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
 .peaches-product-card__image-wrap {
@@ -73,7 +73,8 @@
 .peaches-product-card__overlay {
     position: absolute;
     inset: 0;
-    background: rgba(92, 64, 51, 0.7); /* Dark wood with transparency */
+    background: rgba(92, 64, 51, 0.7);
+    /* Dark wood with transparency */
     display: flex;
     align-items: center;
     justify-content: center;

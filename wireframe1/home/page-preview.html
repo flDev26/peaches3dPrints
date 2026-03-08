@@ -1,13 +1,16 @@
 <!-- PAGE PREVIEW COMPONENT: page-preview.html -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peaches 3D Prints - Home Preview</title>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Jura:wght@400..700&family=Poppins:wght@300;400;500;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Jura:wght@400..700&family=Poppins:wght@300;400;500;600&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
 
     <!-- Global Styles -->
     <link rel="stylesheet" href="/assets/style.css">
@@ -15,16 +18,18 @@
     <!-- Component Logic Requirements -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    
+
     <!-- Component Styles -->
     <link rel="stylesheet" href="/header/style.css">
     <link rel="stylesheet" href="/home/hero/style.css">
     <link rel="stylesheet" href="/home/services/style.css">
     <link rel="stylesheet" href="/home/products/style.css">
+    <link rel="stylesheet" href="/home/gallery/style.css">
     <link rel="stylesheet" href="/footer/style.css">
 </head>
+
 <body class="page page--home">
-    
+
     <!-- HEADER COMPONENT -->
     <header class="peaches-header" id="peachesHeader"></header>
 
@@ -37,6 +42,9 @@
 
         <!-- PRODUCTS COMPONENT -->
         <section class="peaches-products" id="peachesProductsSection"></section>
+
+        <!-- GALLERY COMPONENT -->
+        <section class="peaches-gallery" id="peachesGallerySection"></section>
     </main>
 
     <!-- FOOTER COMPONENT -->
@@ -56,9 +64,11 @@
                 peachesLoader('/home/hero/section.html', 'peachesHeroSection');
                 peachesLoader('/home/services/section.html', 'peachesServicesSection');
                 peachesLoader('/home/products/section.html', 'peachesProductsSection');
+                peachesLoader('/home/gallery/section.html', 'peachesGallerySection');
                 peachesLoader('/footer/section.html', 'peachesFooter');
             }
         });
     </script>
 </body>
+
 </html>
