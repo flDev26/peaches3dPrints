@@ -1,0 +1,81 @@
+/* FAQ CONTACT COMPONENT: style.css */
+.peaches-faq-contact {
+    position: relative;
+    z-index: 10;
+    background-color: var(--clr-primary-darkwood);
+    color: var(--clr-white);
+    padding: var(--section-padding);
+}
+
+.peaches-faq-contact__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+    align-items: center;
+}
+
+.peaches-faq-contact__title {
+    color: var(--clr-primary-peach);
+    margin-bottom: var(--spacing-sm);
+}
+
+.peaches-faq-contact__desc {
+    color: var(--clr-secondary-lightgray);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-md);
+    max-width: 45ch;
+}
+
+.peaches-faq-contact__details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.peaches-faq-contact__detail-row {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.peaches-faq-contact__detail-icon {
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+.peaches-faq-contact__detail-text {
+    color: var(--clr-secondary-lightgray);
+    font-size: 1rem;
+}
+
+.peaches-faq-contact__btn {
+    display: inline-flex;
+}
+
+.peaches-faq-contact__map-placeholder {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background: linear-gradient(135deg, var(--clr-primary-choc) 0%, var(--clr-secondary-lightwood) 100%);
+    border-radius: var(--border-radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.peaches-faq-contact__map-label {
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    color: var(--clr-white);
+    opacity: 0.6;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+@media (max-width: 768px) {
+    .peaches-faq-contact__grid {
+        grid-template-columns: 1fr;
+    }
+}

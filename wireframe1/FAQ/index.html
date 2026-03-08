@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Peaches 3D Prints</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Jura:wght@400..700&family=Poppins:wght@300;400;500;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="/assets/style.css">
+
+    <!-- Component Logic Requirements -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Component Styles -->
+    <link rel="stylesheet" href="/header/style.css">
+    <link rel="stylesheet" href="/FAQ/hero/style.css">
+    <link rel="stylesheet" href="/FAQ/questions/style.css">
+    <link rel="stylesheet" href="/FAQ/shipping/style.css">
+    <link rel="stylesheet" href="/FAQ/contact/style.css">
+    <link rel="stylesheet" href="/footer/style.css">
+    <style>
+        /* Modern Header Offset */
+        :root {
+            --header-height: clamp(60px, 8vw, 80px);
+        }
+        .page--faq {
+            padding-top: var(--header-height);
+        }
+    </style>
+</head>
+<body class="page page--faq">
+    
+    <!-- HEADER COMPONENT -->
+    <header class="peaches-header" id="peachesHeader"></header>
+
+    <main class="page__content">
+        <!-- FAQ HERO COMPONENT -->
+        <section class="peaches-faq-hero" id="peachesFaqHeroSection"></section>
+
+        <!-- QUESTIONS COMPONENT -->
+        <section class="peaches-faq-questions" id="peachesFaqQuestionsSection"></section>
+
+        <!-- SHIPPING COMPONENT -->
+        <section class="peaches-faq-shipping" id="peachesFaqShippingSection"></section>
+
+        <!-- CONTACT COMPONENT -->
+        <section class="peaches-faq-contact" id="peachesFaqContactSection"></section>
+    </main>
+
+    <!-- FOOTER COMPONENT -->
+    <footer class="peaches-footer" id="peachesFooter"></footer>
+
+    <!-- Global & Component Scripts -->
+    <script src="/assets/main.js"></script>
+    <script src="/FAQ/hero/script.js"></script>
+    <script src="/FAQ/questions/script.js"></script>
+    <script src="/FAQ/shipping/script.js"></script>
+    <script src="/FAQ/contact/script.js"></script>
+    <script src="/footer/script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (window.peachesLoader) {
+                peachesLoader('/header/section.html', 'peachesHeader');
+                peachesLoader('/FAQ/hero/section.html', 'peachesFaqHeroSection');
+                peachesLoader('/FAQ/questions/section.html', 'peachesFaqQuestionsSection');
+                peachesLoader('/FAQ/shipping/section.html', 'peachesFaqShippingSection');
+                peachesLoader('/FAQ/contact/section.html', 'peachesFaqContactSection');
+                peachesLoader('/footer/section.html', 'peachesFooter');
+            }
+        });
+    </script>
+</body>
+</html>

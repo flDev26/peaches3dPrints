@@ -8,15 +8,20 @@
         <nav class="peaches-header__nav" id="peachesHeaderNav" aria-label="Main Navigation">
             <ul class="peaches-header__menu" id="peachesHeaderMenu">
                 <li class="peaches-header__menu-item" id="peachesHeaderMenuItem1"><a href="/index.html#services" class="peaches-header__link" id="peachesHeaderLink1">Our Craft</a></li>
-                <li class="peaches-header__menu-item" id="peachesHeaderMenuItem2"><a href="/index.html#store" class="peaches-header__link" id="peachesHeaderLink2">Store</a></li>
+                <li class="peaches-header__menu-item" id="peachesHeaderMenuItem2"><a href="/storeCatalog/index.html" class="peaches-header__link" id="peachesHeaderLink2">Store</a></li>
                 <li class="peaches-header__menu-item" id="peachesHeaderMenuItem3"><a href="/aboutUs/index.html" class="peaches-header__link" id="peachesHeaderLink3">Our Story</a></li>
+                <li class="peaches-header__menu-item" id="peachesHeaderMenuItem4"><a href="/FAQ/index.html" class="peaches-header__link" id="peachesHeaderLink4">FAQ</a></li>
             </ul>
         </nav>
-        <div class="peaches-header__actions" id="peachesHeaderActions">
-            <!-- Placeholder for cart -->
-            <button class="peaches-header__cart-btn" id="peachesHeaderCartBtn" aria-label="Open Cart">
+        <div class="peaches-header__actions" id="peachesHeaderActions" style="display:flex; gap:1rem; align-items:center;">
+            <!-- Account Icon -->
+            <a href="/storeAcctDash/index.html" class="peaches-header__account-link" id="peachesHeaderAccountLink" aria-label="My Account" style="color:var(--clr-primary-darkwood); text-decoration:none; font-size:1.2rem;">
+                👤
+            </a>
+            <!-- Cart Button -->
+            <button class="peaches-header__cart-btn" id="peachesHeaderCartBtn" aria-label="Open Cart" onclick="window.location.href='/storeCart/index.html';">
                 <span class="peaches-header__cart-icon" id="peachesHeaderCartIcon">🛒</span>
-                <span class="peaches-header__cart-count" id="peachesHeaderCartCount">0</span>
+                <span class="peaches-header__cart-count" id="peachesHeaderCartCount">3</span>
             </button>
         </div>
     </div>

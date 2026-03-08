@@ -1,0 +1,41 @@
+/* FAQ HERO COMPONENT: style.css */
+.peaches-faq-hero {
+    position: relative;
+    width: 100vw;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--clr-primary-darkwood);
+    color: var(--clr-white);
+    padding: calc(var(--section-padding) * 2) 0;
+    padding-top: calc(var(--header-height) + var(--spacing-lg));
+    overflow: hidden;
+}
+
+.peaches-faq-hero__container {
+    width: 100%;
+}
+
+.peaches-faq-hero__content {
+    max-width: 900px;
+}
+
+.peaches-faq-hero__headline {
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    line-height: 1.1;
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+}
+
+.peaches-faq-hero__headline-line {
+    display: block;
+    overflow: hidden;
+    color: var(--clr-primary-peach);
+}
+
+.peaches-faq-hero__subtitle {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--clr-secondary-lightgray);
+    max-width: 50ch;
+}

@@ -1,0 +1,85 @@
+<div class="peaches-details__container container">
+    <!-- Breadcrumbs -->
+    <nav class="peaches-details__breadcrumbs">
+        <a href="/index.html">Home</a> &gt; 
+        <a href="/storeCatalog/index.html">Store</a> &gt; 
+        <span>Articulated Mech Dragon</span>
+    </nav>
+
+    <div class="peaches-details__grid">
+        <!-- Product Images -->
+        <div class="peaches-details__gallery">
+            <div class="peaches-details__main-image-wrapper">
+                <img src="/assets/placeholder-product.jpg" alt="Articulated Mech Dragon" class="peaches-details__main-image" id="mainProductImage">
+            </div>
+            <div class="peaches-details__thumbnails">
+                <img src="/assets/placeholder-product.jpg" alt="Thumbnail 1" class="peaches-details__thumb active">
+                <img src="/assets/placeholder-product.jpg" alt="Thumbnail 2" class="peaches-details__thumb">
+                <img src="/assets/placeholder-product.jpg" alt="Thumbnail 3" class="peaches-details__thumb">
+                <img src="/assets/placeholder-product.jpg" alt="Thumbnail 4" class="peaches-details__thumb">
+            </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="peaches-details__info">
+            <h1 class="peaches-details__title">Articulated Mech Dragon</h1>
+            <p class="peaches-details__price">$45.00</p>
+            
+            <div class="peaches-details__badges">
+                <span class="badge badge--orange">Best Seller</span>
+                <span class="badge badge--outline">Gaming & Toys</span>
+            </div>
+
+            <p class="peaches-details__description">
+                Bring your tabletop campaigns to life or add a striking piece to your display shelf with this intricately designed, fully articulated mechanical dragon. Printed in high-quality PLA with highly detailed moving joints.
+            </p>
+
+            <form class="peaches-details__form" action="/storeCart/index.html">
+                <!-- Options -->
+                <div class="peaches-details__option-group">
+                    <label for="colorSelect" class="peaches-details__label">Color</label>
+                    <select id="colorSelect" class="peaches-details__select">
+                        <option value="silver">Metallic Silver</option>
+                        <option value="gold">Antique Gold</option>
+                        <option value="black">Matte Black</option>
+                        <option value="custom">Custom (+ $5.00)</option>
+                    </select>
+                </div>
+
+                <div class="peaches-details__option-group">
+                    <label for="sizeSelect" class="peaches-details__label">Size</label>
+                    <select id="sizeSelect" class="peaches-details__select">
+                        <option value="standard">Standard (8")</option>
+                        <option value="large">Large (12") (+ $15.00)</option>
+                    </select>
+                </div>
+
+                <!-- Quantity & Add to Cart -->
+                <div class="peaches-details__action-row">
+                    <div class="peaches-details__quantity">
+                        <button type="button" class="peaches-details__qty-btn" id="qtyMinus">-</button>
+                        <input type="number" id="qtyInput" class="peaches-details__qty-input" value="1" min="1" max="10">
+                        <button type="button" class="peaches-details__qty-btn" id="qtyPlus">+</button>
+                    </div>
+                    <button type="submit" class="btn btn--primary peaches-details__add-btn">Add to Cart</button>
+                </div>
+            </form>
+
+            <!-- Additional Details Accordion -->
+            <div class="peaches-details__accordion">
+                <details class="peaches-details__accordion-item">
+                    <summary class="peaches-details__accordion-title">Material Information</summary>
+                    <div class="peaches-details__accordion-content">
+                        Printed using durable, eco-friendly PLA plastic. Not recommended for prolonged exposure to direct sunlight or temperatures above 130°F.
+                    </div>
+                </details>
+                <details class="peaches-details__accordion-item">
+                    <summary class="peaches-details__accordion-title">Shipping & Returns</summary>
+                    <div class="peaches-details__accordion-content">
+                        Standard items ship within 3-5 business days. Custom colors require an additional 2 days of processing. Returns accepted within 14 days of delivery.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </div>
+</div>

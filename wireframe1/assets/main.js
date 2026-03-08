@@ -17,6 +17,8 @@ window.peachesLoader = (url, containerId, callback) => {
             if (container) {
                 container.innerHTML = html;
                 if (callback) callback();
+                // Refresh ScrollTrigger as new content has changed page height
+                if (window.ScrollTrigger) ScrollTrigger.refresh();
                 // Dispatch a custom event for other scripts to know a component is loaded
                 document.dispatchEvent(new CustomEvent('peachesComponentLoaded', { detail: { containerId, url } }));
             }

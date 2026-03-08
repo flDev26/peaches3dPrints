@@ -1,0 +1,77 @@
+/* FAQ SHIPPING COMPONENT: style.css */
+.peaches-faq-shipping {
+    position: relative;
+    z-index: 10;
+    background-color: var(--clr-secondary-lightpeach);
+    padding: calc(var(--section-padding) * 1.5) 0;
+}
+
+.peaches-faq-shipping__header {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.peaches-faq-shipping__title {
+    color: var(--clr-primary-darkwood);
+    margin-bottom: var(--spacing-sm);
+}
+
+.peaches-faq-shipping__desc {
+    color: var(--clr-primary-darkgray);
+    max-width: 50ch;
+    margin: 0 auto;
+}
+
+.peaches-faq-shipping__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.peaches-faq-shipping__card {
+    background-color: var(--clr-white);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-md);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    transition: var(--transition-base);
+}
+
+.peaches-faq-shipping__card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.peaches-faq-shipping__card--accent {
+    background-color: var(--clr-accent-orange);
+    color: var(--clr-white);
+    border-color: transparent;
+}
+
+.peaches-faq-shipping__card--accent .peaches-faq-shipping__card-title {
+    color: var(--clr-white);
+}
+
+.peaches-faq-shipping__card--accent .peaches-faq-shipping__card-text {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.peaches-faq-shipping__icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.peaches-faq-shipping__card-title {
+    font-family: var(--font-h2);
+    font-weight: 600;
+    color: var(--clr-primary-darkwood);
+    margin-bottom: var(--spacing-xs);
+}
+
+.peaches-faq-shipping__card-text {
+    color: var(--clr-primary-darkgray);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}

@@ -39,6 +39,7 @@
     --border-radius-sm: 8px;
     --border-radius-md: 16px;
     --border-radius-pill: 100px;
+    --header-height: clamp(60px, 8vw, 80px);
 }
 
 /* Base Rest */

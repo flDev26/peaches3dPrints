@@ -1,0 +1,137 @@
+<div class="peaches-dashboard__container container">
+    <div class="peaches-dashboard__header">
+        <h1 class="peaches-dashboard__title">My Account</h1>
+        <p class="peaches-dashboard__subtitle">Welcome back, John! Manage your orders and account details here.</p>
+    </div>
+
+    <div class="peaches-dashboard__layout">
+        
+        <!-- Sidebar Navigation -->
+        <aside class="peaches-dashboard__nav card">
+            <ul class="peaches-dashboard__nav-list">
+                <li><button class="peaches-dashboard__nav-link active" data-target="orders">Order History</button></li>
+                <li><button class="peaches-dashboard__nav-link" data-target="profile">Profile Details</button></li>
+                <li><button class="peaches-dashboard__nav-link" data-target="addresses">Saved Addresses</button></li>
+                <li><a href="/index.html" class="peaches-dashboard__nav-link peaches-dashboard__nav-link--logout">Log Out</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content Area -->
+        <div class="peaches-dashboard__content">
+            
+            <!-- Order History Panel -->
+            <div class="peaches-dashboard__panel active" id="orders">
+                <h2 class="peaches-dashboard__panel-title">Order History</h2>
+                
+                <div class="peaches-dashboard__order-list">
+                    <!-- Order Item -->
+                    <div class="peaches-dashboard__order-card card">
+                        <div class="peaches-dashboard__order-header">
+                            <div>
+                                <span class="peaches-dashboard__order-label">Order Placed</span>
+                                <span class="peaches-dashboard__order-value">March 15, 2026</span>
+                            </div>
+                            <div>
+                                <span class="peaches-dashboard__order-label">Total</span>
+                                <span class="peaches-dashboard__order-value">$103.73</span>
+                            </div>
+                            <div>
+                                <span class="peaches-dashboard__order-label">Order #</span>
+                                <span class="peaches-dashboard__order-value">PEACH-84729</span>
+                            </div>
+                        </div>
+                        <div class="peaches-dashboard__order-body">
+                            <div class="peaches-dashboard__order-status">
+                                <span class="peaches-dashboard__status-dot peaches-dashboard__status-dot--processing"></span>
+                                <strong>Processing</strong> (Estimated ship: March 18)
+                            </div>
+                            <div class="peaches-dashboard__order-items">
+                                <img src="/assets/placeholder-product.jpg" alt="Dragon" class="peaches-dashboard__order-img">
+                                <img src="/assets/placeholder-product.jpg" alt="Planter" class="peaches-dashboard__order-img">
+                                <span class="peaches-dashboard__order-more">+1 item</span>
+                            </div>
+                            <div class="peaches-dashboard__order-actions">
+                                <button class="btn btn--outline">View Invoice</button>
+                                <button class="btn btn--primary">Track Package</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Past Order Item -->
+                    <div class="peaches-dashboard__order-card card">
+                        <div class="peaches-dashboard__order-header bg-light">
+                            <div>
+                                <span class="peaches-dashboard__order-label">Order Placed</span>
+                                <span class="peaches-dashboard__order-value">Feb 02, 2026</span>
+                            </div>
+                            <div>
+                                <span class="peaches-dashboard__order-label">Total</span>
+                                <span class="peaches-dashboard__order-value">$35.00</span>
+                            </div>
+                            <div>
+                                <span class="peaches-dashboard__order-label">Order #</span>
+                                <span class="peaches-dashboard__order-value">PEACH-73918</span>
+                            </div>
+                        </div>
+                        <div class="peaches-dashboard__order-body">
+                            <div class="peaches-dashboard__order-status">
+                                <span class="peaches-dashboard__status-dot peaches-dashboard__status-dot--delivered"></span>
+                                <strong>Delivered</strong>
+                            </div>
+                            <div class="peaches-dashboard__order-items">
+                                <img src="/assets/placeholder-product.jpg" alt="Dice Tower" class="peaches-dashboard__order-img">
+                            </div>
+                            <div class="peaches-dashboard__order-actions">
+                                <button class="btn btn--outline">View Invoice</button>
+                                <button class="btn btn--secondary">Buy Again</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Details Panel (Hidden by default) -->
+            <div class="peaches-dashboard__panel" id="profile">
+                <h2 class="peaches-dashboard__panel-title">Profile Details</h2>
+                <div class="card">
+                    <form class="peaches-dashboard__form">
+                        <div class="peaches-dashboard__field-group">
+                            <div class="peaches-dashboard__field">
+                                <label for="pfFirst">First Name</label>
+                                <input type="text" id="pfFirst" value="John">
+                            </div>
+                            <div class="peaches-dashboard__field">
+                                <label for="pfLast">Last Name</label>
+                                <input type="text" id="pfLast" value="Doe">
+                            </div>
+                        </div>
+                        <div class="peaches-dashboard__field">
+                            <label for="pfEmail">Email Address</label>
+                            <input type="email" id="pfEmail" value="name@example.com">
+                        </div>
+                        <button type="button" class="btn btn--primary" style="margin-top:1rem;">Save Changes</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Addresses Panel (Hidden by default) -->
+            <div class="peaches-dashboard__panel" id="addresses">
+                <h2 class="peaches-dashboard__panel-title">Saved Addresses</h2>
+                <div class="card">
+                    <address class="peaches-dashboard__address-block">
+                        <strong>John Doe (Default)</strong><br>
+                        123 Printing Lane<br>
+                        Apt 4B<br>
+                        Creative City, NY 10001
+                    </address>
+                    <div style="margin-top: 1rem; display: flex; gap: 0.5rem;">
+                        <button class="btn btn--outline">Edit</button>
+                        <button class="btn btn--outline" style="color:red; border-color:red;">Delete</button>
+                    </div>
+                </div>
+                <button class="btn btn--secondary" style="margin-top:1.5rem;">+ Add New Address</button>
+            </div>
+
+        </div>
+    </div>
+</div>

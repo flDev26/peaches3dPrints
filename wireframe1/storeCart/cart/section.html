@@ -1,0 +1,82 @@
+<div class="peaches-cart__container container">
+    <div class="peaches-cart__header">
+        <h1 class="peaches-cart__title">Your Cart</h1>
+        <p class="peaches-cart__subtitle">Review your items before proceeding to checkout.</p>
+    </div>
+
+    <div class="peaches-cart__layout">
+        <!-- Cart Items List -->
+        <div class="peaches-cart__items">
+            <!-- Item 1 -->
+            <div class="peaches-cart-item card">
+                <img src="/assets/placeholder-product.jpg" alt="Articulated Mech Dragon" class="peaches-cart-item__image">
+                <div class="peaches-cart-item__details">
+                    <h3 class="peaches-cart-item__title">Articulated Mech Dragon</h3>
+                    <p class="peaches-cart-item__variant">Color: Metallic Silver | Size: Standard (8")</p>
+                    <button class="peaches-cart-item__remove-btn btn--link">Remove</button>
+                </div>
+                <div class="peaches-cart-item__actions">
+                    <div class="peaches-cart-item__qty">
+                        <button class="peaches-cart-item__qty-btn" aria-label="Decrease quantity">-</button>
+                        <input type="number" class="peaches-cart-item__qty-input" value="1" min="1" max="10" readonly>
+                        <button class="peaches-cart-item__qty-btn" aria-label="Increase quantity">+</button>
+                    </div>
+                    <div class="peaches-cart-item__price">$45.00</div>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="peaches-cart-item card">
+                <img src="/assets/placeholder-product.jpg" alt="Geometric Planter" class="peaches-cart-item__image">
+                <div class="peaches-cart-item__details">
+                    <h3 class="peaches-cart-item__title">Low-Poly Geometric Planter</h3>
+                    <p class="peaches-cart-item__variant">Color: Matte Black</p>
+                    <button class="peaches-cart-item__remove-btn btn--link">Remove</button>
+                </div>
+                <div class="peaches-cart-item__actions">
+                    <div class="peaches-cart-item__qty">
+                        <button class="peaches-cart-item__qty-btn" aria-label="Decrease quantity">-</button>
+                        <input type="number" class="peaches-cart-item__qty-input" value="2" min="1" max="10" readonly>
+                        <button class="peaches-cart-item__qty-btn" aria-label="Increase quantity">+</button>
+                    </div>
+                    <div class="peaches-cart-item__price">$44.00</div>
+                </div>
+            </div>
+            
+            <div class="peaches-cart__continue">
+                <a href="/storeCatalog/index.html" class="btn btn--outline">&laquo; Continue Shopping</a>
+            </div>
+        </div>
+
+        <!-- Order Summary -->
+        <div class="peaches-cart__summary card">
+            <h3 class="peaches-cart__summary-title">Order Summary</h3>
+            
+            <div class="peaches-cart__summary-row">
+                <span>Subtotal (3 items)</span>
+                <span>$89.00</span>
+            </div>
+            <div class="peaches-cart__summary-row">
+                <span>Estimated Shipping</span>
+                <span>$8.50</span>
+            </div>
+            <div class="peaches-cart__summary-row">
+                <span>Tax</span>
+                <span>Calculated at checkout</span>
+            </div>
+            
+            <hr class="peaches-cart__divider">
+            
+            <div class="peaches-cart__summary-row peaches-cart__summary-total">
+                <span>Total</span>
+                <span>$97.50</span>
+            </div>
+
+            <a href="/storeCheckout/index.html" class="btn btn--primary peaches-cart__checkout-btn">Proceed to Checkout</a>
+            
+            <div class="peaches-cart__secure-note">
+                <p>🔒 Secure Checkout</p>
+            </div>
+        </div>
+    </div>
+</div>

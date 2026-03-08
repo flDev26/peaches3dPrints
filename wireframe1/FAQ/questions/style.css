@@ -1,0 +1,91 @@
+/* FAQ QUESTIONS COMPONENT: style.css */
+.peaches-faq-questions {
+    position: relative;
+    z-index: 10;
+    background-color: var(--clr-white);
+    padding: calc(var(--section-padding) * 1.5) 0;
+}
+
+.peaches-faq-questions__header {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.peaches-faq-questions__title {
+    color: var(--clr-primary-darkwood);
+    margin-bottom: var(--spacing-sm);
+}
+
+.peaches-faq-questions__desc {
+    color: var(--clr-primary-darkgray);
+    max-width: 55ch;
+    margin: 0 auto;
+}
+
+.peaches-faq-questions__list {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.peaches-faq-questions__item {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: var(--border-radius-sm);
+    transition: var(--transition-base);
+}
+
+.peaches-faq-questions__item[open] {
+    border-color: var(--clr-accent-orange);
+    box-shadow: 0 4px 20px rgba(242, 147, 13, 0.08);
+}
+
+.peaches-faq-questions__question {
+    cursor: pointer;
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    color: var(--clr-primary-darkwood);
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: var(--transition-base);
+}
+
+.peaches-faq-questions__question::-webkit-details-marker {
+    display: none;
+}
+
+.peaches-faq-questions__question::after {
+    content: '+';
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--clr-accent-orange);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    margin-left: var(--spacing-sm);
+}
+
+.peaches-faq-questions__item[open] .peaches-faq-questions__question::after {
+    content: '−';
+    transform: rotate(180deg);
+}
+
+.peaches-faq-questions__question:hover {
+    background-color: var(--clr-secondary-lightpeach);
+}
+
+.peaches-faq-questions__answer {
+    padding: 0 var(--spacing-md) var(--spacing-sm);
+    color: var(--clr-primary-darkgray);
+    line-height: 1.7;
+}
+
+.peaches-faq-questions__answer p {
+    margin-bottom: var(--spacing-xs);
+}
+
+.peaches-faq-questions__answer p:last-child {
+    margin-bottom: 0;
+}

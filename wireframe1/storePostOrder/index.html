@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed - Peaches 3D Prints</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Jura:wght@400..700&family=Poppins:wght@300;400;500;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="/assets/style.css">
+
+    <!-- Component Logic Requirements -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Component Styles -->
+    <link rel="stylesheet" href="/header/style.css">
+    <link rel="stylesheet" href="/storePostOrder/confirmation/style.css">
+    <link rel="stylesheet" href="/footer/style.css">
+    <style>
+        .page--store {
+            padding-top: var(--header-height);
+        }
+    </style>
+</head>
+<body class="page page--store">
+    
+    <!-- HEADER COMPONENT -->
+    <header class="peaches-header" id="peachesHeader"></header>
+
+    <main class="page__content">
+        <!-- CONFIRMATION COMPONENT -->
+        <section class="peaches-confirmation" id="peachesConfirmationSection"></section>
+    </main>
+
+    <!-- FOOTER COMPONENT -->
+    <footer class="peaches-footer" id="peachesFooter"></footer>
+
+    <!-- Global & Component Scripts -->
+    <script src="/assets/main.js"></script>
+    <script src="/storePostOrder/confirmation/script.js"></script>
+    <script src="/footer/script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (window.peachesLoader) {
+                peachesLoader('/header/section.html', 'peachesHeader');
+                peachesLoader('/storePostOrder/confirmation/section.html', 'peachesConfirmationSection');
+                peachesLoader('/footer/section.html', 'peachesFooter');
+            }
+        });
+    </script>
+</body>
+</html>
